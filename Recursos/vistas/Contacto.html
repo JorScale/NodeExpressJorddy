@@ -8,6 +8,32 @@
 <body>
     
     <%- include('Parciales/navegacion.html') %>
+    <div class="container">
+        <form action="/Formulario" method="post">
+
+        </form><hr>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th> Tarea </th>
+                    <th> Descripcion</th>
+                    <th> Estado</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <%for(let i = 0; i< task.length; i++){%>
+                    <tr>
+                        <td><%= i + 1 %></td>
+                        <td><strong> <%= task[i].title %></strong></td>
+                        <td><strong> <%= task[i].description %></strong></td>
+                    </tr>
+                <% }%> 
+            </tbody>
+        </table>
+    </div>
     <div class="wrapper">
 
     </div>
